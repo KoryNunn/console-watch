@@ -13,6 +13,42 @@ test('log', function(t){
     });
 });
 
+test('error', function(t){
+    t.plan(1);
+
+    consoleWatch(function(getResults){
+        console.error('foo');
+
+        var results = getResults();
+
+        t.deepEqual(results, {error:['foo']});
+    });
+});
+
+test('warn', function(t){
+    t.plan(1);
+
+    consoleWatch(function(getResults){
+        console.warn('foo');
+
+        var results = getResults();
+
+        t.deepEqual(results, {warn:['foo']});
+    });
+});
+
+test('info', function(t){
+    t.plan(1);
+
+    consoleWatch(function(getResults){
+        console.info('foo');
+
+        var results = getResults();
+
+        t.deepEqual(results, {info:['foo']});
+    });
+});
+
 test('multiple params', function(t){
     t.plan(1);
 

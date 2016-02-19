@@ -1,9 +1,10 @@
-var methods = Object.keys(console),
+var methods = [],
     originals = {};
 
-methods.map(function(key){
-    return originals[key] = console[key];
-});
+for(var key in console){
+    methods.push(key);
+    originals[key] = console[key];
+}
 
 module.exports = function(callback) {
     var results = {};
