@@ -1,7 +1,7 @@
 {
   "name": "console-watch",
   "version": "1.0.1",
-  "description": "",
+  "description": "Track console.log/warn/error/etc...",
   "main": "index.js",
   "scripts": {
     "test": "node test"
@@ -10,5 +10,17 @@
   "license": "ISC",
   "devDependencies": {
     "tape": "^4.4.0"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KoryNunn/console-watch.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/KoryNunn/console-watch/issues"
+  },
+  "homepage": "https://github.com/KoryNunn/console-watch#readme"
 }
